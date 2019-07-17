@@ -1,0 +1,27 @@
+"use strict";
+
+function Sum(arg) {
+    let currentSum = 0;
+    if (arg == null) {
+        currentSum = currentSum;
+    } 
+    else {
+        currentSum = arg;
+    }
+    function f(b){
+        if (b == null) {
+            currentSum = currentSum;
+        }
+        else {
+            currentSum += b;
+        }
+        return f;
+    }
+   
+    f.toString = function(){
+        return currentSum;
+    }
+   
+    return f;
+    };
+  console.log ( Sum(2)(3)());
